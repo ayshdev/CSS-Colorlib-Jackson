@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.nav-item>.nav-link {
+    color: rgba(0, 0, 0, 0.699);
+}
+
+.nav-item>.nav-link:hover {
+    color: rgb(44, 132, 247);
+    text-decoration: underline;
+}
+
+.nav-item>.nav-link:active {
+    color: rgb(44, 132, 247);
+    text-decoration: underline;
+}
+
+.nav-item>.nav-link:focus {
+    color: rgb(44, 132, 247);
+    text-decoration: underline;
+}
+
+#bg1>img {
+    height: 100vh;
+}
+
+/* #bg1{
+    animation: slider1 2s ease infinite;
+}
+
+@keyframes slider1 {
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+#bg2{
+    animation: slider2 2s ease infinite;
+}
+@keyframes slider2 {
+        from{
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.autoShow{
+    position: absolute;
+    top: 170px;
+    padding-left: 40px;
+
+}
+
+.autoShow{
+    animation: text-appear 1s ease;
+}
+@keyframes text-appear {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeSlide 10s infinite;
+    opacity: 0;
+}
+#bg2 {
+    animation-delay: 5s;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.autoShow {
+    position: absolute;
+    top: 170px;
+    left: 40px;
+    opacity: 0;
+    animation: textAppear 10s infinite;
+    animation-delay: 1s;
+}
+#bg2 .autoShow {
+    animation-delay: 6s;
+}
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    5% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes textAppear {
+
+    0%,
+    9% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
