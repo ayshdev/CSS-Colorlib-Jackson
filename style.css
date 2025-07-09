@@ -1,8 +1,50 @@
+:root{
+    --orange: #ec5453;
+    --blue: #2c98f0;
+    --yellow: #f9bf3f;
+    --purple: #a84cb8;
+}
 body {
     margin: 0;
     overflow-x: hidden;
 }
+::selection{
+    color: #fff;
+    background-color: #2c98f0;;
+}
 
+/* media query */
+@media (max-width: 767.98px) {
+    body{
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+  #mainbox {
+    margin-left: 10px !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+  #about-container{
+    margin-right: 10px !important;
+  }
+  .cards{
+    margin-right: 0 !important;
+    margin: auto !important;
+    margin-top: 20px !important;
+    
+  }
+  #abt-hire{
+    margin: 0 20px !important;
+    height: auto !important;
+    padding-bottom: 20px !important;
+    margin-top: 20px !important;
+  }
+}
+/* navbar */
 .nav-item>.nav-link {
     color: rgba(0, 0, 0, 0.699);
 }
@@ -21,62 +63,11 @@ body {
     color: rgb(44, 132, 247);
     text-decoration: underline;
 }
-
+/* slider */
 #bg1>img {
     height: 100vh;
 }
 
-/* #bg1{
-    animation: slider1 2s ease infinite;
-}
-
-@keyframes slider1 {
-    from{
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to{
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-}
-#bg2{
-    animation: slider2 2s ease infinite;
-}
-@keyframes slider2 {
-        from{
-        opacity: 0;
-        transform: translateX(-100px);
-
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-.autoShow{
-    position: absolute;
-    top: 170px;
-    padding-left: 40px;
-
-}
-
-.autoShow{
-    animation: text-appear 1s ease;
-}
-@keyframes text-appear {
-    from{
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
- */
 
 .slider-container {
     position: relative;
@@ -84,6 +75,7 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+
 .slide {
     position: absolute;
     top: 0;
@@ -101,6 +93,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 .autoShow {
     position: absolute;
     top: 170px;
@@ -157,5 +150,100 @@ body {
     100% {
         opacity: 0;
         transform: translateY(-30px);
+    }
+}
+/* about */
+#abt-text{
+    margin-top: 100px;
+    margin-right: 100px;
+    line-height: 30px;
+    animation: aboutText 0.8s 3s;
+}
+@keyframes aboutText {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* cards */
+.cards{
+    width: 180px;
+    height: 150px;
+    display: inline-block;
+    margin-right: 30px;
+    box-shadow: 7px 10px 20px rgba(0, 0, 0, 0.178);
+    animation: cardsAppear 1.2s 4s;
+}
+@keyframes cardsAppear {
+        from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);  
+    }
+}
+.cards:hover{
+    cursor: pointer;
+    box-shadow: inset 2px 10px 20px rgba(73, 71, 71, 0.377);
+    width: 185px;
+    height: 155px;
+}
+.icon-box{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    /* border: 2px solid black; */
+
+
+}
+.icon-box>img{
+    object-fit: contain;
+    /* border: 2px solid rgb(212, 16, 16); */
+    height: 45px;
+
+}
+.cards> h6{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#card1{
+    border-bottom: 3px solid var(--blue);
+}
+#card2{
+    border-bottom: 3px solid var(--orange);
+}
+#card3{
+    border-bottom: 3px solid var(--yellow);
+}
+#card4{
+    border-bottom: 3px solid var(--purple);
+}
+#abt-hire{
+    background-color: var(--yellow);
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-right: 30%;
+    padding-top: 50px;
+    height: 230px;
+    line-height: 30px;
+    margin-right: 100px;
+    animation: abtHire 1.5s 5s;
+    margin-bottom: 100px;
+}
+@keyframes abtHire {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
